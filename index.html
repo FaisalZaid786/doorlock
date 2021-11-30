@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+    <!-- <script type= "text/javascript">
+        setKey('{{ApiKey}}','{{Name}}');
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Doorlocking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <button class="changepwd submit-btn" onclick="changepwd()">Change Password</button>
+    <button class="forgotpwd submit-btn" onclick="forgotpwd()">Forgot Password</button>
+    <button class="goback submit-btn" onclick="goback()">Go Back</button>
+    <div class="container">
+        <div class="alert">ALERT WRONG PERSON!</div>
+        <div class="header">
+            <span>DOORLOCK SYSTEM</span>
+        </div>
+        <br>
+        <br>
+        <div class="enter-pwd">
+            Enter Password:
+        </div>
+        <div class="text-box">
+            <input type="password" name="password" id="password"></input>
+            <button class="submit-btn" type="submit" onclick="submit()"> OPEN</button>
+        </div>
+        <div class="enter-pwd new-pwd">
+            Enter New Password:
+        </div>
+        <div class="text-box new-pwd">
+            <input type="password" name="password" id="newpassword"></input>
+            <button class="submit-btn" type="submit" onclick="newpwd()">CHANGE</button>
+        </div>
+        <div class="dialpad">
+            <div class="row 1">
+                <span><button onclick="one()">1</button></span>
+                <span><button onclick="two()">2</button></span>
+                <span><button onclick="three()">3</button></span>
+            </div>
+            <div class="row 2">
+                <span><button onclick="four()">4</button></span>
+                <span><button onclick="five()">5</button></span>
+                <span><button onclick="six()">6</button></span>
+            </div>
+            <div class="row 3">
+                <span><button onclick="seven()">7</button></span>
+                <span><button onclick="eight()">8</button></span>
+                <span><button onclick="nine()">9</button></span>
+            </div>
+            <div class="row 4">
+                <span><button onclick="hash()">#</button></span>
+                <span><button onclick="zero()">0</button></span>
+                <span><button onclick="astrick()">*</button></span>
+            </div>
+        </div>
+        <div class="reset">
+            <button class="reset-btn" onclick="reset()">RESET</button>
+        </div>
+        <br>
+
+    </div>
+</body>
+<script src="./script.js">
+
+</script>
+
+</html>
