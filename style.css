@@ -9,9 +9,10 @@ body{
     box-sizing: border-box;
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
 }
 a{
     color:inherit;
@@ -21,15 +22,34 @@ a:hover{
     color:#e63946;
     text-decoration: underline;
 }
-
+.dialpad {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
 .container{
     color:white;
+    /* height: 100px; */
     /* margin-left:300px; */
     /* padding:100px; */
+    /* height: 300px; */
+    margin-top: 4rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    /* height: 60vh; */
+    /* width: auto; */
+    /* border: 1px solid red; */
     font-size:40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -41,6 +61,11 @@ a:hover{
     display:none;
 }
 .text-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid red; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .text-box input{
@@ -51,6 +76,8 @@ a:hover{
     border-radius:4px;
     font-size:15px;
     margin-bottom:20px;
+    margin-right: 1.5rem;
+    /* height: 100%; */
 }
 .text-box input:focus{
     background-color: #457b9d;
@@ -65,19 +92,27 @@ button{
     border-radius: 5px;
     margin:8px;
     font-size:18px;
-    padding:8px 26px;
+    /* padding:8px 26px; */
+   
     font-family: gotham rounded,sans-serif;
 }
-button:hover{
-    background-color: #e06b75;
+.row button {
+    width: 60px;
+    height: 50px;
 }
-button:focus{
+
+button:hover{
+    background: #000000;
+}
+/* button:focus{
     background-color: white;
     color:#000000;
-}
+} */
 .submit-btn,.reset-btn{
     font-size: 15px;
     background-color: #4f9d45;
+    width: 80px;
+    height: 50px;
 }
 .submit-btn:hover,.reset-btn:hover{
     background-color: white;
@@ -93,6 +128,18 @@ button:focus{
 .changepwd,.goback,.forgotpwd{
     float:right;
     margin:20px;
+    /* width: 100%;
+    height: 50px; */
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+.buttonContainer > button {
+    width: 70%;
+    padding: 10px;
+    height: auto;
 }
 @media screen and (max-width: 480px) {
     body{
@@ -121,6 +168,7 @@ button:focus{
     }
     .enter-pwd{
         font-size: 13px;
+        
     }
     .submit-btn,.reset-btn{
         font-size: 10px;
